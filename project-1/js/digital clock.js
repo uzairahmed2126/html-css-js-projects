@@ -6,11 +6,7 @@ const minutes = document.getElementById('minutes')
 
 const txtsec = document.getElementById('txt-sec')
 const seconds = document.getElementById('seconds')
-seconds.addEventListener('click',()=>{
-    setTimeout(()=>{
-        txtsec.innerHTML=seconds
-    },1000)
-})
+
 
 let ampm = document.getElementById('ampm')
 
