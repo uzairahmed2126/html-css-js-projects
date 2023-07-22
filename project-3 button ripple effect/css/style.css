@@ -47,7 +47,10 @@ body {
     width: 500px;
     height: 500px;
 }
-
+.btn:hover{
+    color: #fff;
+    transition: color 0.9s;
+}
 .btn span{
     position: relative;
     z-index: 1;
