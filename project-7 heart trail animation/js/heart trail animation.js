@@ -7,12 +7,11 @@ bodyEl.addEventListener('mouseover', (event) => {
   spanEl.style.background = '#' + random()
   spanEl.style.left = xPosition + 'px'
   spanEl.style.top = yPosition + 'px'
+  const size =Math.random()*100
+  spanEl.style.width=size+'px'
+  spanEl.style.height=size+'px'  
+  bodyEl.style.background = '#' + random()
 
-  // document.querySelector('span').style.visibility='hidden'
-  // bodyEl.addEventListener('mouseleave',()=>{
-  //     document.querySelector('span').style.visibility='visible'
-
-  // })
 })
 function random() {
   const char = '0123456789abcdef'
