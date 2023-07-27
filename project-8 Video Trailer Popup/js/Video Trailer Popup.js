@@ -20,9 +20,7 @@ window.addEventListener('keypress', (event) => {
   if (event.key === 't') {
     video.requestPictureInPicture()
     console.log('tab view')
+  } else {
+    event.key = ''
   }
-  else{
-    event.key=''
-  }
-
 })
