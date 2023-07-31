@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 230px; */
+    /* background: #f9f9f9; */
+    height: 100vh;
+    background-image:  linear-gradient(rgba(3, 8, 3, 0.486),#228622a2,rgba(255, 0, 0, 0.575));
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
