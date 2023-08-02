@@ -37,7 +37,6 @@ body {
     background-image:  linear-gradient(rgba(122, 85, 92, 0.801), rgba(193, 156, 201, 0.856),#120c247e,rgba(74, 8, 90, 0.664));
     border-radius: 10px;
     box-shadow: 0px 4px 8px 3px #000;
-    cursor: pointer;
     font-size: 20px;
     display: grid;
     grid-template-columns: repeat(1,60px);
@@ -60,6 +59,8 @@ span {
     padding: 10px;
     background-color: #00000033;
     padding: 0px;
+    cursor: pointer;
+
 }
 span:hover {
     scale: 1.4;

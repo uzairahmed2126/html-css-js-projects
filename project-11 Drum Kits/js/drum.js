@@ -5,20 +5,17 @@ const SurahFalaq = document.getElementById('btn-3')
 const SurahAnNaas = document.getElementById('btn-4')
 const audioEl = document.getElementById('audioEl')
 const span = document.querySelector('span')
-let spanClassPlay;
-let spanClassStop; 
+let spanClassPlay = span.setAttribute('class', 'fa-solid fa-play')
 let isOn = false
 span.addEventListener('click', () => {
   audioEl.src = './sounds/Surah Al-Fatiha.mp3'
-  span.style.visibility='hidden'
   isOn = !isOn
   if (isOn) {
     audioEl.play()
-     span.innerHTML('class', 'fa-solid fa-pause')
+    span.setAttribute('class', 'fa-solid fa-pause')
   } else {
     audioEl.pause()
     span.setAttribute('class', 'fa-solid fa-play')
-
   }
 })
 
@@ -28,8 +25,10 @@ SurahIkhlas.addEventListener('click', () => {
   isOn = !isOn
   if (isOn) {
     audioEl.play()
+    span.setAttribute('class', 'fa-solid fa-pause')
   } else {
     audioEl.pause()
+    span.setAttribute('class', 'fa-solid fa-play')
   }
 })
 
