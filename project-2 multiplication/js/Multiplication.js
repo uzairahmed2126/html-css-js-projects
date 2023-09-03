@@ -1,8 +1,8 @@
 const questions = document.getElementById('question')
 const scoreEl = document.getElementById('score')
 const formEl = document.getElementById('form')
-const num1 = Math.ceil(Math.random() * 1)
-const num2 = Math.ceil(Math.random() * 1)
+const num1 = Math.ceil(Math.random() * 20)
+const num2 = Math.ceil(Math.random() * 100)
 const correctAns = num1 * num2
 const text = document.getElementById('text')
 const reset = document.getElementById('refresh-btn')

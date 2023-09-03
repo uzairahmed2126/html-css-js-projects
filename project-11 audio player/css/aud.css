@@ -4,14 +4,11 @@
 }
 
 body {
-  /* height: 230px; */
-  /* background: #f9f9f9; */
-  /* height: 200vh; */
-  background-image: linear-gradient(
-    rgba(3, 8, 3, 0.486),
-    #228622a2,
-    rgba(255, 0, 0, 0.575)
-  );
+  /*rgba(38, 233, 38, 0.486),
+    #17db17cb,
+    rgba(60, 255, 0, 0.877) */
+  /* background-color: rgb(0, 0, 139) blue; */
+  background-image: linear-gradient(#000, rgb(0, 0, 139), #000);
 }
 
 .container {
@@ -24,24 +21,19 @@ body {
 }
 
 .inner-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns:repeat(2,2fr);
 }
+
 .btn {
   padding: 30px;
   margin: 20px;
   outline: none;
   border: none;
-  background-image: linear-gradient(
-    rgba(122, 85, 92, 0.801),
-    rgba(193, 156, 201, 0.856),
-    #120c247e,
-    rgba(74, 8, 90, 0.664)
-  );
+  background-image: linear-gradient(rgba(122, 85, 92, 0.801),
+      rgba(193, 156, 201, 0.856),
+      #120c247e,
+      rgba(74, 8, 90, 0.664));
   border-radius: 10px;
   box-shadow: 0px 4px 8px 3px #000;
   font-size: 20px;
@@ -51,40 +43,37 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .btn:hover {
   transition: all 0.3s ease-in-out;
-  /* filter: brightness(1.1); */
-  /* color: #fff; */
-  /* scale: 1.1; */
   transform: translate(-0%, -5%) scale(1.1);
 }
 
 .fa-play {
   margin: 10px;
-  /* position: absolute; */
   top: 100%;
   border-radius: 10%;
-  /* padding: 10px; */
   background-color: #00000033;
   padding: 0px;
   cursor: pointer;
 }
+
 .fa-pause {
   margin: 10px;
-  /* position: absolute; */
   top: 100%;
   border-radius: 10%;
-  /* padding: 10px; */
   background-color: #00000033;
   padding: 0px;
   cursor: pointer;
 }
+
 .fa-play:hover,
 .fa-pause:hover {
   scale: 1.4;
   cursor: pointer;
 }
-
+audio{
+}
 /* Styling the audio container */
 /* .audio-container {
     width: 300px;
@@ -103,13 +92,6 @@ audio::-webkit-media-controls-panel {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    rgba(230, 207, 211, 0.801),
-    rgba(201, 194, 156, 0.856),
-    #a49fb37e,
-    rgba(154, 216, 154, 0.664)
-  );
-
   border-radius: 3px;
 }
 
