@@ -115,40 +115,74 @@
 //     audioEl.pause()
 //   }
 // })
-
+const qari = [
+  'Qari Abdul Basit',
+  'Surah Al-Fatiha',
+  'Surah Al-Ikhlaas',
+  'Surah Al-Falaq',
+]
 const Kits = [
+  'Surah Al-Fatiha',
+  'Surah Al-Ikhlaas',
+  'Surah Al-Falaq',
+  'Surah An-Naas',
+  'Surah Al-Fatiha',
+  'Surah Al-Ikhlaas',
+  'Surah Al-Falaq',
+  'Surah An-Naas',
   'Surah Al-Fatiha',
   'Surah Al-Ikhlaas',
   'Surah Al-Falaq',
   'Surah An-Naas',
 ]
 const containerEl = document.querySelector('.container')
+const soundContainer = document.querySelector('.sound-container')
 let isOn = false
-Kits.forEach((kit) => {
-  // Creat elements
-  const btnEl = document.createElement('button')
+qari.forEach((playList) => {
+  const QariName = document.createElement('button')
   const span = document.createElement('span')
   span.setAttribute('class', 'fa-solid fa-play')
-  btnEl.classList.add('btn')
-  btnEl.innerText = kit
-  containerEl.appendChild(btnEl)
-  btnEl.appendChild(span)
-  const audioEl = document.createElement('audio')
-  audioEl.src = 'sounds/' + kit + '.mp3'
-  audioEl.setAttribute('controls', '')
-  containerEl.appendChild(audioEl)
-  btnEl.addEventListener('click', () => {
-    isOn = !isOn
-    if (isOn) {
-      audioEl.play()
-      span.setAttribute('class', 'fa-solid fa-pause')
-      if (audioEl.ended) {
-        audioEl.ended()
+  QariName.classList.add('play-list-btn')
+  QariName.innerText = playList
+  soundContainer.appendChild(QariName)
+  QariName.appendChild(span)
+  const p = document.createElement('p')
+  p.innerHTML = qari
+  QariName.addEventListener('click', () => {
+    containerEl.classList.toggle('active')
+    QariName.style.visibility='hidden'
+  })
+
+
+  Kits.forEach((kit) => {
+    // Creat elements
+    const btnEl = document.createElement('button')
+    const span = document.createElement('span')
+    span.setAttribute('class', 'fa-solid fa-play')
+    btnEl.classList.add('btn')
+    btnEl.innerText = kit
+    containerEl.appendChild(btnEl)
+    btnEl.appendChild(span)
+    const audioEl = document.createElement('audio')
+    audioEl.src = 'sounds/' + kit + '.mp3'
+    // audioEl.setAttribute('controls', '')
+    containerEl.appendChild(audioEl)
+    btnEl.addEventListener('click', () => {
+      isOn = !isOn
+      if (isOn) {
+        audioEl.play()
+        span.setAttribute('class', 'fa-solid fa-pause')
+        if (audioEl.ended) {
+          audioEl.ended()
+          span.setAttribute('class', 'fa-solid fa-play')
+        }
+      } else {
+        audioEl.pause()
         span.setAttribute('class', 'fa-solid fa-play')
       }
-    } else {
-      audioEl.pause()
-      span.setAttribute('class', 'fa-solid fa-play')
-    }
+    })
   })
+
 })
+
+
